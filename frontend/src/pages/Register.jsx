@@ -32,8 +32,8 @@ function Register() {
         email: form.email,
         password: form.password,
       });
-      navigate("/todos");
       localStorage.setItem("token", response.data.token);
+      navigate("/todos");
     } catch (err) {
         setError(err.response.data.message);   
     }finally{
